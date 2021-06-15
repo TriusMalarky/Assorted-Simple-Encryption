@@ -9,11 +9,13 @@ keycode=[];subcode=[];endcode=[];import string;listof=string.printable+" ";end="
 
 # Convert input 'key' to array of integers
 for i in key:
-    keycode.append(listof.find(i))
+    if i != " ":
+        keycode.append(listof.find(i))
 
 # Convert input "subject" to array of integers
 for i in subject:
-    subcode.append(listof.find(i))
+    if i != " ":
+        subcode.append(listof.find(i))
 
 # Extend 'keycode' array to be long enough to not cause IOOR errors
 keycode = keycode*15
